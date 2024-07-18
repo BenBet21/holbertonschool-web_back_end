@@ -1,2 +1,6 @@
 *_test.js
 node_modules
+main.js
+.eslintrc.js
+babel.*
+package*
