@@ -29,7 +29,7 @@ export default class HolbertonCourse {
     return this._students;
   }
   set students(arr) {
-    if (Array.isArray(arr) {
+    if (Array.isArray(arr)) {
       throw new TypeError('students must be an array');
     }
     for (student in arr) {
@@ -39,4 +39,5 @@ export default class HolbertonCourse {
     }
     this._students = arr;
   }
+
 }
