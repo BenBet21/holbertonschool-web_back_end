@@ -1,8 +1,8 @@
 /* eslint-disable */
-import Currency from './3-currency';
+import Currency from './3-currency.js';
 
 export default class Pricing {
-  cosntructor(amount, currency) {
+  constructor(amount, currency) {
     if (typeof amount !== 'number')
       throw new TypeError('Amount must be a number');
     if (!(currency instanceof Currency))
