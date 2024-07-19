@@ -6,19 +6,12 @@ export default class Building {
       throw new TypeError('Sqft must be a number');
     this._sqft = sqft;
     
-    if (new.target === Building)
-      throw new Error('Building cannot be instantiated directly');
-
-    if (this.evacuationWarningMessage === undefined)
+    if (this.constructor !== Building && !this.evacuationWarningMessage)
       throw new Error('Class extending Building must override evacuationWarningMessage');
   }
 
   get sqft() {
     return this._sqft;
   }
-  set sqft(value) {
-    if (typeof value !== 'number')
-      throw new TypeError('Sqft must be a number');
-    this._sqft = value;
-}
+ 
 }
