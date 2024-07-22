@@ -1,7 +1,7 @@
 /* eslint-disable */
 export default function updateUniqueItems(map) {
  if (!map instanceof Map) 
-  throw new Error ('Cannot process');
+  throw new TypeError ('Cannot process');
  
  map.forEach((value, key) => {
   if (value === 1) {
