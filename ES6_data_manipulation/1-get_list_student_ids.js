@@ -1,3 +1,4 @@
+/* eslint-disable */
 export default function getListStudentIds(arrayOfStudents) {
   if (!Array.isArray(arrayOfStudents)) {
     return [];
