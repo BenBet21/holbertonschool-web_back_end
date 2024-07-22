@@ -8,7 +8,6 @@ export default class Car {
   }
 
   cloneCar() {
-    const clonedCar = Object.assign(Object.create(Object.getPrototypeOf(this)), this);
-    return clonedCar;
+    return new this.constructor(this._brand, this._motor, this._color);
   }
 }
