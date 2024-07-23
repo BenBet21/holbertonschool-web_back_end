@@ -4,3 +4,4 @@ main.js
 .eslintrc.js
 babel.*
 package*
+utils.js
