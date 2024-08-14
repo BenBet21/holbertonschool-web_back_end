@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
+"""
+    Simple element_length function with a list of strings
+"""
 
-from typing import Callable
+from typing import Iterable, List, Sequence, Tuple
 
-def make_multiplier(multiplier: float) -> Callable[[float], float]:
+def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
     """
-        Return a function that multiplies
+        Return a list of tuples
+        each tuple containing a string
+        and its length
     """
-    def mult(n: float) -> float:
-      """
-          Return the product of n and multiplier
-      """
-      return n * multiplier
-    return mult
+    return [(i, len(i)) for i in lst]
