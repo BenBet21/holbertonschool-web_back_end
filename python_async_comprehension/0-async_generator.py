@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-0. Async Generator
+0. Async Generator that loops 10 times, each time asynchronously
 """
 
 import asyncio
