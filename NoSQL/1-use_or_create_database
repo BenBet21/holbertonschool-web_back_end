@@ -1,2 +1,2 @@
-// Let's list all databases in MongoDB
+// commande to create or use a database my_db
 use my_db
