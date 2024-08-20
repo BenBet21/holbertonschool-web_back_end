@@ -1,0 +1,2 @@
+// Let's list all databases in MongoDB
+use my_db
