@@ -3,8 +3,6 @@
 this function returns the list of school having a specific topic:
 """
 
-from typing import List
-
 
 def schools_by_topic(mongo_collection, topic):
     """
@@ -12,4 +10,4 @@ def schools_by_topic(mongo_collection, topic):
     """
     if mongo_collection is None:
         return []
-    return List(mongo_collection.find({"topics": topic}))
+    return mongo_collection.find({"topics": topic})
