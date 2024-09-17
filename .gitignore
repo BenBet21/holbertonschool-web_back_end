@@ -4,7 +4,6 @@ main.js
 .eslintrc.js
 babel.*
 package*
-utils.js
 main.html
 main.py
 _pycache_
