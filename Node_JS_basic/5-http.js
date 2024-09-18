@@ -10,23 +10,21 @@ const app = http.createServer(async (req, res) => {
     res.writeHead(200, { 'Content-Type': 'text/plain' });
     res.end('Hello Holberton School!');
   } else if (req.url === '/students') {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
     res.write('This is the list of our students\n');
-    
     try {
-      await countStudents(path);
-    } catch (err) {
-      res.end(err.message);
-      return;
+      const { students, csStudents, sweStudents } = await countStudents(DATABASE);
+      res.write(`Number of students: ${students.length}\n`);
+      res.write(`Number of students in CS: ${csStudents.length}. List: ${csStudents.join(', ')}\n`);
+      res.write(`Number of students in SWE: ${sweStudents.length}. List: ${sweStudents.join(', ')}`);
+      res.end();
+    } catch (error) {
+      res.end(error.message);
     }
-
-    res.end();
   } else {
-    res.writeHead(404, { 'Content-Type': 'text/plain' });
-    res.end('Not Found');
+    res.writeHead(404);
+    res.end('Invalid request');
   }
 });
 
-app.listen(1245);
-
+app.listen(PORT, HOSTNAME);
 module.exports = app;
