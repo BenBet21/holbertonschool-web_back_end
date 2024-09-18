@@ -1,6 +1,9 @@
 const http = require('http');
 const countStudents = require('./3-read_file_async');
-const path = process.argv[2];  // Le chemin de la base de données est passé en argument
+
+const HOSTNAME = '127.0.0.1';
+const PORT = 1245;
+const DATABASE = process.argv[2];
 
 const app = http.createServer(async (req, res) => {
   if (req.url === '/') {
